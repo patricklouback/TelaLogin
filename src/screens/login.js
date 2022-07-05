@@ -1,23 +1,15 @@
-import React, {useState, useEffect} from 'react';
+import React, {useState} from 'react';
 import { View, Image, TextInput, TouchableOpacity, Text } from 'react-native';
 import estilos from './styles';
 import GerarToken from '../services/gerarToken';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 
-export default function Login() {
+export default function Login({navigation}) {
     const [token, setToken] = useState(null);
 
-    function salvatoken() {
-      
-      setToken(GerarToken().toString());
-
-      async function gravaToken(){
-        await AsyncStorage.setItem('token', token);
-      }
-      gravaToken(); 
-      alert(token);
-
-      }
+    function abreTelaCadastro(){
+      navigation.navigate('cadastro');
+    }
 
  return (
    <View style = { estilos.container }>
@@ -64,7 +56,7 @@ export default function Login() {
       </TouchableOpacity>
 
       <TouchableOpacity>
-        <Text style = { estilos.textEsqueceu } onPress = {salvatoken}>Cadastre-se</Text>
+        <Text style = { estilos.textEsqueceu } onPress = {abreTelaCadastro}>Cadastre-se</Text>
       </TouchableOpacity>
     
     </View>
