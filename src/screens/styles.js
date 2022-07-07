@@ -5,7 +5,7 @@ import { StyleSheet } from "react-native";
 const estilos = StyleSheet.create({
     container: {
       flex: 1,
-      backgroundColor: '#231F5C'
+      backgroundColor: '#E9E7FF'
     },
     viewDivisaoLogo: {
       flex: 1.5,
@@ -39,16 +39,17 @@ const estilos = StyleSheet.create({
       height: 45,
       borderWidth:1,
       width: 300,
-      borderColor: '#FFF',
+      borderColor: '#4B4668',
       borderRadius: 10,
       marginLeft: 15,
       fontSize: 20,
       padding: 10,
+      color: '#4B4668'
     },
     btnArea:{
       justifyContent:'center',
       alignItems: 'center',
-      backgroundColor: '#FFF',
+      backgroundColor: '#4B4668',
       height: 50,
       width: 380,
       margin: 17,
@@ -57,11 +58,11 @@ const estilos = StyleSheet.create({
     textBtn:{
       fontSize: 25,
       fontWeight: 'bold',
-      color: '#231F5C'
+      color: '#E9E7FF'
     },
     textEsqueceu:{
       fontSize: 25,
-      color: '#FFF',
+      color: '#4B4668',
       margin: 20
     },
   });
